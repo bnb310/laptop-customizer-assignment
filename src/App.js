@@ -94,7 +94,7 @@ class App extends Component {
         </header>
         <main>
           <Form features = {features}/>
-          <Cart USCurrencyFormat = {USCurrencyFormat} summary = {summary} total = {total} />
+          <Cart USCurrencyFormat = {USCurrencyFormat} summary = {summary} total = {total} selectedOption = {selectedOption} />
         </main>
       </div>
     );

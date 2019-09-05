@@ -7,7 +7,7 @@ class Cart extends Component {
         return (
           <section className="main__summary">
             <h2>Your cart</h2>
-            <Summary USCurrencyFormat = {this.props.USCurrencyFormat} total = {this.props.total} featureHash = {this.props.featureHash} options = {this.props.options} summary = {this.props.summary} />
+            <Summary USCurrencyFormat = {this.props.USCurrencyFormat} total = {this.props.total} featureHash = {this.props.featureHash} options = {this.props.options} summary = {this.props.summary} selectedOption = {this.props.selectedOption} />
             <div className="summary__total">
               <div className="summary__total__label">Total</div>
               <div className="summary__total__value">
