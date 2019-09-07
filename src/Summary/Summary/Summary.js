@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
 
+const summary = Object.keys(this.state.selected).map((feature, idx) => {
+      const featureHash = feature + '-' + idx;
+      const selectedOption = this.state.selected[feature];
+  
+      return (
+        <div className="summary__option" key={featureHash}>
+          <div className="summary__option__label">{feature} </div>
+          <div className="summary__option__value">{selectedOption.name}</div>
+          <div className="summary__option__cost">
+            {(this.props.USCurrencyFormat).format(selectedOption.cost)}
+          </div>
+        </div>
+      );
+    });
 
-class Summary extends Component {
-    render () {
-        const summary = Object.keys(this.state.selected).map((feature, idx) => {
-            const featureHash = feature + '-' + idx;
-            const selectedOption = this.state.selected[feature];
-            return (
-            <div className="summary__option" key={featureHash}>
-              <div className="summary__option__label">{this.props.feature} </div>
-              <div className="summary__option__value">{selectedOption.name}</div>
-              <div className="summary__option__cost">
-                {this.props.USCurrencyFormat.format(selectedOption.cost)}
-              </div>
-            </div>
-          );
-          });
-        
-    }
-}
-
-export default Summary;
+export default summary;
