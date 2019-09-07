@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Summary from './Summary/Summary'
+import summary from './Summary/Summary'
 
 
 class Cart extends Component {
@@ -7,7 +7,7 @@ class Cart extends Component {
         return (
           <section className="main__summary">
             <h2>Your cart</h2>
-            <Summary USCurrencyFormat = {this.props.USCurrencyFormat} total = {this.props.total} featureHash = {this.props.featureHash} options = {this.props.options} summary = {this.props.summary} selectedOption = {this.props.selectedOption} />
+            <summary USCurrencyFormat = {this.props.USCurrencyFormat}/>
             <div className="summary__total">
               <div className="summary__total__label">Total</div>
               <div className="summary__total__value">
